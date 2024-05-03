@@ -4,17 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "node-sass sass/main.scss css/style.css -w",
-    "start-live-server": "live-server",
-    "start": "concurrently \"npm run compile:sass\" \"npm run start-live-server\""
+    "compile:sass": "npx sass --watch sass/main.scss css/style.css",
+    "start": "live-server && npm run compile:sass"
   },
   "author": "Thomas",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^8.2.2",
     "node-sass": "^9.0.0"
-  },
-  "dependencies": {
-    "jquery": "^3.7.1"
   }
 }
